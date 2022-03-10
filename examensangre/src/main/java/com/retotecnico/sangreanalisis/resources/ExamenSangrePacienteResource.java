@@ -50,13 +50,7 @@ public class ExamenSangrePacienteResource {
         return Response.ok().entity(examenSangre).build();
     }
 
-    @DELETE
-    @Path("{id}")
-    public Response delete(@PathParam("{id}") Long id) {
-    	ExamenSangre examenSangrePaciente = examenSangrePacienteRepository.findById(id);
-    	examenSangrePacienteRepository.delete(examenSangrePaciente);
-        return Response.noContent().build();
-    }
+   
     
     
     

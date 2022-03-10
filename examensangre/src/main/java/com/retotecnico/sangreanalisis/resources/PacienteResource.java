@@ -48,9 +48,9 @@ public class PacienteResource {
         builder.path(Long.toString(pacienteId.getId()));
         return Response.created(builder.build()).build();
     }
-    /*
+    
     /* Add ExamenSangre to an Paciente */
-    /*
+    
     @POST
     @Path("/{id}/examensangre")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -61,16 +61,16 @@ public class PacienteResource {
         UriBuilder builder = uriInfo.getAbsolutePathBuilder();
          builder.path(Long.toString(examenSangrePacienteId.getId()));
         return Response.created(builder.build()).build();
-     }*/
+     }
     
     
     /* Get examen de sangre*/
-    /*
+    
     @GET
     @Path("{id}/examensangre")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getComments(@PathParam("id") Long id) {
+    public Response getExamenSangre(@PathParam("id") Long id) {
     	
         Paciente paciente = pacienteRepository.findByIdPaciente(id);
         List<ExamenSangre> esp =paciente.getRtExamenSangre();
@@ -79,14 +79,14 @@ public class PacienteResource {
        
         return Response.ok(jsonString).build();
     }
-    */
+    
     /* Delete examen de sangre*/
-    /*
+    
     @GET
     @Path("{id}/examensangre/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response deleteComments(@PathParam("id") Long id, @PathParam("idExamen") Long idExamen) {
+    public Response deleteExamenSangre(@PathParam("id") Long id, @PathParam("id") Long idExamen) {
     	
         Paciente p = pacienteRepository.findByIdPaciente(id);
         if (p == null) {
@@ -102,7 +102,7 @@ public class PacienteResource {
         pacienteRepository.deleteExamenSangrePaciente(id, idExamen);
         return Response.ok().build();
        
-    }*/
+    }
 
    
 }

@@ -2,7 +2,7 @@ package com.retotecnico.sangreanalisis.entities;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.time.Instant;
+
 
 import javax.persistence.*;
 
