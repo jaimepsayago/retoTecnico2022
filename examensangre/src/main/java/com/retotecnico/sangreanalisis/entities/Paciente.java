@@ -1,10 +1,12 @@
 package com.retotecnico.sangreanalisis.entities;
 
+
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
+import java.util.Date;
 import java.sql.Timestamp;
-import java.time.Instant;
+import java.util.List;
+
 
 /**
  * The persistent class for the rt_paciente database table.
@@ -12,7 +14,7 @@ import java.time.Instant;
  */
 @Entity
 @Table(name="rt_paciente")
-@NamedQuery(name="Paciente.findAll", query="SELECT distinct p FROM Paciente p join fetch p.rtExamenSangre")
+@NamedQuery(name="Paciente.findAll", query="SELECT p.id, p.nombre FROM Paciente p")
 public class Paciente implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -20,18 +22,42 @@ public class Paciente implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
-	
+	@Column(name="apellido_paciente")
+	private String apellidoPaciente;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="\"created_Paciente\"")
+	private Date created_Paciente;
+
+	private Timestamp created;
+
+	@Column(name="direccion_paciente")
+	private String direccionPaciente;
+
+	@Column(name="email_paciente")
+	private String emailPaciente;
+
+	@Column(name="identificacion_paciente")
+	private String identificacionPaciente;
+
 	@Column(name="nombre_paciente")
 	private String nombrePaciente;
 
+	@Column(name="telefono_paciente")
+	private String telefonoPaciente;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="\"updated_Pacient\"")
+	private Date updated_Pacient;
+
+	@Column(name="updated_paciente")
+	private Timestamp updatedPaciente;
+
+	private Timestamp update;
+
 	//bi-directional many-to-one association to ExamenSangre
-	@OneToMany(mappedBy="rtPaciente",fetch= FetchType.EAGER)
+	@OneToMany(mappedBy="rtPaciente", fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 	private List<ExamenSangre> rtExamenSangre;
-	
-	@Column(name = "createdAt")
-	private Timestamp createdAt;
-    @Column(name = "updatedAt")
-	private Timestamp updatedAt;
 
 	public Paciente() {
 	}
@@ -44,12 +70,95 @@ public class Paciente implements Serializable {
 		this.id = id;
 	}
 
+	public String getApellidoPaciente() {
+		return this.apellidoPaciente;
+	}
+
+	public void setApellidoPaciente(String apellidoPaciente) {
+		this.apellidoPaciente = apellidoPaciente;
+	}
+
+	public Date getCreated_Paciente() {
+		return this.created_Paciente;
+	}
+
+	public void setCreated_Paciente(Date created_Paciente) {
+		this.created_Paciente = created_Paciente;
+	}
+
+	
+	public String getDireccionPaciente() {
+		return this.direccionPaciente;
+	}
+
+	public void setDireccionPaciente(String direccionPaciente) {
+		this.direccionPaciente = direccionPaciente;
+	}
+
+	public String getEmailPaciente() {
+		return this.emailPaciente;
+	}
+
+	public void setEmailPaciente(String emailPaciente) {
+		this.emailPaciente = emailPaciente;
+	}
+
+	public String getIdentificacionPaciente() {
+		return this.identificacionPaciente;
+	}
+
+	public void setIdentificacionPaciente(String identificacionPaciente) {
+		this.identificacionPaciente = identificacionPaciente;
+	}
+
 	public String getNombrePaciente() {
 		return this.nombrePaciente;
 	}
 
 	public void setNombrePaciente(String nombrePaciente) {
 		this.nombrePaciente = nombrePaciente;
+	}
+
+	public String getTelefonoPaciente() {
+		return this.telefonoPaciente;
+	}
+
+	public void setTelefonoPaciente(String telefonoPaciente) {
+		this.telefonoPaciente = telefonoPaciente;
+	}
+
+	public Date getUpdated_Pacient() {
+		return this.updated_Pacient;
+	}
+
+	public void setUpdated_Pacient(Date updated_Pacient) {
+		this.updated_Pacient = updated_Pacient;
+	}
+
+	public Timestamp getUpdatedPaciente() {
+		return this.updatedPaciente;
+	}
+
+	public void setUpdatedPaciente(Timestamp updatedPaciente) {
+		this.updatedPaciente = updatedPaciente;
+	}
+
+	
+
+	public Timestamp getCreated() {
+		return created;
+	}
+
+	public void setCreated(Timestamp created) {
+		this.created = created;
+	}
+
+	public Timestamp getUpdate() {
+		return update;
+	}
+
+	public void setUpdate(Timestamp update) {
+		this.update = update;
 	}
 
 	public List<ExamenSangre> getRtExamenSangre() {
@@ -59,14 +168,6 @@ public class Paciente implements Serializable {
 	public void setRtExamenSangre(List<ExamenSangre> rtExamenSangre) {
 		this.rtExamenSangre = rtExamenSangre;
 	}
-	
-	 public Instant getCreatedAt() {
-	        return createdAt.toInstant();
-	    }
-
-	    public Instant getUpdatedAt() {
-	        return updatedAt.toInstant();
-	    }
 
 	public ExamenSangre addExamenSangre(ExamenSangre rtExamenSangre) {
 		getRtExamenSangre().add(rtExamenSangre);

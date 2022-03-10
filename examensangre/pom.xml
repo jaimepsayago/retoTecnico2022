@@ -38,6 +38,17 @@
     <artifactId>postgresql</artifactId>
     <version>42.2.5</version>
 </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.25</version>
+    </dependency>
+        <!-- DbUnit -->   
+        <dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>2.5.0</version>
+        </dependency>
 
   </dependencies>
   <build>

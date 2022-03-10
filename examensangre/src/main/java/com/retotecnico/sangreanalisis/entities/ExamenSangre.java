@@ -28,17 +28,17 @@ public class ExamenSangre implements Serializable {
 	@JoinColumn(name="id_paciente")
 	private Paciente rtPaciente;
 
+	@Column(name = "porcentaje_azucar")
 	private double porcentajeAzucar;
-
-
+	@Column(name = "porcentaje_grasa")
 	private double porcentajeGrasa;
-
+	@Column(name = " porcentaje_oxigeno")
 	private double porcentajeOxigeno;
 	
-	@Column(name = "createdAt")
-	private Timestamp createdAt;
-    @Column(name = "updatedAt")
-	private Timestamp updatedAt;
+	@Column(name = "created")
+	private Timestamp created;
+    @Column(name = "updated")
+	private Timestamp updated;
 	
 	public ExamenSangre() {
 	}
@@ -90,13 +90,23 @@ public class ExamenSangre implements Serializable {
 	public void setPorcentajeOxigeno(double porcentajeOxigeno) {
 		this.porcentajeOxigeno = porcentajeOxigeno;
 	}
-	
-	 public Instant getCreatedAt() {
-	        return createdAt.toInstant();
-	    }
 
-	    public Instant getUpdatedAt() {
-	        return updatedAt.toInstant();
-	    }
+	public Timestamp getCreated() {
+		return created;
+	}
+
+	public void setCreated(Timestamp created) {
+		this.created = created;
+	}
+
+	public Timestamp getUpdated() {
+		return updated;
+	}
+
+	public void setUpdated(Timestamp updated) {
+		this.updated = updated;
+	}
+	
+	
 
 }
