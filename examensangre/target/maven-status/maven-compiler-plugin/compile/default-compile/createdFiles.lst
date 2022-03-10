@@ -1,0 +1,12 @@
+com\retotecnico\sangreanalisis\repositories\PacienteRepository.class
+com\retotecnico\sangreanalisis\SangreanalisisRestApplication.class
+com\retotecnico\sangreanalisis\entities\AuditModel.class
+com\retotecnico\sangreanalisis\metric\MetricController.class
+com\retotecnico\sangreanalisis\entities\Paciente.class
+com\retotecnico\controllers\PacienteController.class
+com\retotecnico\sangreanalisis\resources\PacienteResource.class
+com\retotecnico\sangreanalisis\entities\ExamenSangre.class
+com\retotecnico\sangreanalisis\resilient\ResilienceController.class
+com\retotecnico\sangreanalisis\HelloController.class
+com\retotecnico\sangreanalisis\resources\ExamenSangrePacienteResource.class
+com\retotecnico\sangreanalisis\repositories\ExamenSangrePacienteRepository.class

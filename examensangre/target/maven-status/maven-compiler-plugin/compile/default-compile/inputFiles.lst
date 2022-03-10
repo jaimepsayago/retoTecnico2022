@@ -1,0 +1,12 @@
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\controllers\PacienteController.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\entities\AuditModel.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\entities\ExamenSangre.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\repositories\PacienteRepository.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\entities\Paciente.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\resilient\ResilienceController.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\resources\ExamenSangrePacienteResource.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\resources\PacienteResource.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\HelloController.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\metric\MetricController.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\repositories\ExamenSangrePacienteRepository.java
+D:\TI\DBP-2021-2\sangreanalisis\sangreanalisis\src\main\java\com\retotecnico\sangreanalisis\SangreanalisisRestApplication.java
